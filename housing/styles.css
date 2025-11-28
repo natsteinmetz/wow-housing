@@ -111,6 +111,16 @@ body {
     background-color: rgba(76, 175, 80, 1);
 }
 
+.house-plot.interested {
+    background-color: rgba(245, 140, 39, 0.8);
+    color: white;
+}
+
+.house-plot.interested:hover {
+    background-color: rgba(245, 140, 39, 0.8);
+}
+
+
 .plot-info {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.9);
@@ -162,6 +172,10 @@ body {
 
 .legend-color.occupied {
     background-color: rgba(76, 175, 80, 0.8);
+}
+
+.legend-color.interested {
+    background-color: rgba(245, 140, 39, 0.8);
 }
 
 @media (max-width: 1000px) {
