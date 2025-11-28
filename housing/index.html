@@ -34,6 +34,7 @@
         const housingData = {
             0: "Malfreyia / Fablewynd",
             1: "Elëos",
+            2: "Insinc",
             3: "Tetani",
             5: "Ath",
             9: "JackInSights",
@@ -51,7 +52,6 @@
             30: "Kymchi",
             31: "Evitel",
             32: "Atlen",
-            33: "Insinc",
             35: "Vitiae",
             36: "Pandacho",
             39: "Patek",
@@ -62,6 +62,14 @@
             48: "Hedning",
             50: "Mysticbeard",
             54: "Ellezanor"
+        };
+
+        const interestedData = {
+            11: "Béa",
+            16: "Arc",
+            22: "Kaldirk",
+            37: "Kymchi, Bambi",
+            52: "Cloud"
         };
 
         // House plot positions loaded from external JSON file
@@ -102,6 +110,14 @@
                     tooltip.className = 'plot-info';
                     tooltip.textContent = `Plot ${position.plotNumber}: ${housingData[position.plotNumber]}`;
                     plot.appendChild(tooltip);
+                } else if (interestedData[position.plotNumber]) {
+                    plot.classList.add('interested');
+                    
+                    // Add tooltip with buyer name
+                    const tooltip = document.createElement('div');
+                    tooltip.className = 'plot-info';
+                    tooltip.textContent = `Plot ${position.plotNumber}: ${interestedData[position.plotNumber]}`;
+                    plot.appendChild(tooltip); 
                 } else {
                     // Add tooltip for available plot
                     const tooltip = document.createElement('div');
