@@ -120,6 +120,14 @@ body {
     background-color: rgba(245, 140, 39, 0.8);
 }
 
+.house-plot.bought {
+    background-color: rgba(48, 104, 194, 1);
+    color: white;
+}
+
+.house-plot.bought:hover {
+    background-color: rgba(48, 104, 194, 1);
+}
 
 .plot-info {
     position: absolute;
