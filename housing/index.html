@@ -22,7 +22,11 @@
         </div>
         <div class="legend-item">
             <div class="legend-color occupied"></div>
-            <span>Occupied</span>
+            <span>Reserved</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color purchased"></div>
+            <span>Purchased</span>
         </div>
         <div class="legend-item">
             <div class="legend-color interested"></div>
@@ -132,7 +136,7 @@
                     // Add tooltip with buyer name
                     const tooltip = document.createElement('div');
                     tooltip.className = 'plot-info';
-                    tooltip.textContent = `Plot ${position.plotNumber}: ${housingData[position.plotNumber]}`;
+                    tooltip.textContent = `Reserved ${position.plotNumber}: ${housingData[position.plotNumber]}`;
                     plot.appendChild(tooltip);
                 } else if (interestedData[position.plotNumber]) {
                     plot.classList.add('interested');
@@ -141,6 +145,14 @@
                     const tooltip = document.createElement('div');
                     tooltip.className = 'plot-info';
                     tooltip.textContent = `Interested in plot ${position.plotNumber}: ${interestedData[position.plotNumber]}`;
+                    plot.appendChild(tooltip); 
+                } else if (purchasedData[position.plotNumber]) {
+                    plot.classList.add('purchased');
+                    
+                    // Add tooltip with buyer name
+                    const tooltip = document.createElement('div');
+                    tooltip.className = 'plot-info';
+                    tooltip.textContent = `Purchased ${position.plotNumber}: ${interestedData[position.plotNumber]}`;
                     plot.appendChild(tooltip); 
                 } else {
                     // Add tooltip for available plot
