@@ -120,12 +120,12 @@ body {
     background-color: rgba(245, 140, 39, 0.8);
 }
 
-.house-plot.bought {
+.house-plot.purchased {
     background-color: rgba(48, 104, 194, 1);
     color: white;
 }
 
-.house-plot.bought:hover {
+.house-plot.purchased:hover {
     background-color: rgba(48, 104, 194, 1);
 }
 
