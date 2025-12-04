@@ -33,78 +33,67 @@
         </div>
     </div>
 
-    <div class="map-container">
-        <div class="map-background" id="mapBackground">
-            <!-- House plots will be dynamically positioned here -->
-        </div>
-    </div>
-
-    <div class="legend">
-        <h3>Legend</h3>
-        <div class="legend-item">
-            <div class="legend-color available"></div>
-            <span>Available</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color occupied"></div>
-            <span>Occupied</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color interested"></div>
-            <span>Someone's interested in it</span>
-        </div>
-        <div style="margin-top: 10px; font-size: 10px; color: #ccc;">
-            Press <strong>G</strong> to toggle grid
-        </div>
-    </div>
-
     <script>
         // Housing data from CSV
         const housingData = {
-            0: "Malfreyia / Fablewynd",
-            1: "Elëos",
-            2: "Insinc",
             3: "Tetani",
-            7: "Artemis",
             10: "Cóleth",
-            12: "Nathellis",
-            13: "Lazryn",
-            16: "Evitel",
-            17: "DiscordianKitty / Zzof",
-            20: "Inine",
             21: "Cwelanas",
-            23: "Epiphania",
-            24: "Entheras / Nultopia",
             26: "Rico",
-            27: "Taleniel",
-            31: "Lany",
-            32: "Atlen",
-            35: "Vitiae",
-            36: "Pandacho: 1st shard, Mysticbeard 2nd shard",
-            37: "Kymchi",
-            40: "Burrich / Burdend",
-            43: "Patek",
-            44: "Thalnis",
-            48: "Hedning",
-            54: "Ellezanor"
         };
 
         const interestedData = {
             4: "Saevash",
-            6: "Béa",
-            8: "Orm",
-            11: "Myff",
-            15: "Evarock",
-            18: "Llucyfae",
-            25: "Meztlcoatl",
-            38: "Arc",
+        };
+
+        const purchasedData = {
+            0: "Malfreyia / Fablewynd",
+            1: "Elëos",
+            2: "Insinc",
+            5: "Céndal",
+            6: "Arcanaeus",
+            7: "Artemis",
+            8: "Loxille",
+            11: "Myffanwy",
+            12: "Nathellis",
+            13: "Lazryn",
+            14: "Alymere",
+            15: "Smeson",
+            16: "Evitel",
+            17: "DiscordianKitty / Zzof",
+            18: "Ljudevit",
+            19: "Wimblenop",
+            20: "Inine / Neideen",
             22: "Kaldirk",
-            28: "Mystica",
-            30: "Bambi",
-            33: "Roessler",
-            46: "Alleri",
-            49: "Cloud",
-            53: "Alymere"
+            23: "Epiphania",
+            24: "Entheras / Nultopia",
+            25: "Ormyn",
+            27: "Taleniel",
+            28: "Dot",
+            29: "Mystica",
+            30: "Evarock",
+            31: "Lany",
+            32: "Atlen",
+            33: "Knefes",
+            34: "Jaretia",
+            35: "Vitiae",
+            36: "Pandacho",
+            37: "Kymchi",
+            38: "Béafyre",
+            39: "Korrelim",
+            40: "Burrich / Shenwick",
+            42: "Tissais",
+            43: "Patek",
+            44: "Thalnis",
+            45: "Sunniest",
+            46: "Scolar",
+            47: "Kaput",
+            48: "Hedning",
+            49: "Cloudspear",
+            50: "Ikuska",
+            51: "Tiareth",
+            52: "Dalmasca",
+            54: "Lárrý"
         };
 
         // House plot positions loaded from external JSON file
